@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receptappen</title>
+    <style src="style.css"></style>
+  </head>
+  <body>
+    <h1>Recept Appen!</h1>
+
+    <button id="containerButton">Lägg till recept</button>
+
+    <div>
+      <div class="firstPart">
+        <form action="" id="recForm"></form>
+
+        <label for="recepieName">Titel</label>
+        <input type="text" placeholder="Titel" />
+
+        <label for="">Beskriv maträtten</label>
+        <textarea name=" " id=""></textarea>
+      </div>
+
+      <!-- popupp formular -->
+      <div class="addIng">
+        <input type="text" placeholder="ingridiens" required />
+        <label for="dropdown">Välj ett alternativ:</label>
+        <select id="dropDown" name="dropdown">
+          <option value="g">g</option>
+          <option value="hg">hg</option>
+          <option value="ml">ml</option>
+          <option value="dl">dl</option>
+          <option value="msk">msk</option>
+          <option value="tsk">tsk</option>
+          <option value="krm">krm</option>
+          <option value="st">st</option>
+        </select>
+        <input type="text" placeholder="mängd" required />
+        <button id="addButton" type="submit">Lägg till</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
