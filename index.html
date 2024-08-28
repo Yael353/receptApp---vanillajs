@@ -4,41 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Receptappen</title>
-    <style src="style.css"></style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Recept Appen!</h1>
+    <h1>Recept App</h1>
 
-    <button id="containerButton">Lägg till recept</button>
+    <button class="containerButton">Upload new recepie</button>
 
-    <div>
-      <div class="firstPart">
-        <form action="" id="recForm"></form>
+    <div class="containerForm">
+      <form action="" class="recForm">
+        <div class="firstPart">
+          <div class="name">
+            <label for="recepieName">Titel</label>
+            <input type="text" placeholder="Titel" />
+          </div>
+          <div class="describe">
+            <label for="description">describe the dish</label>
+            <textarea name="description" class="description"></textarea>
+          </div>
+        </div>
 
-        <label for="recepieName">Titel</label>
-        <input type="text" placeholder="Titel" />
+        <!-- popup formulär -->
+        <div class="addIng">
+          <div class="addIng2">
+            <label id="ingrediensInput">Ingrediens</label>
+            <input type="text" placeholder="Ingrediens" required />
+          </div>
+          <div class="addIng2">
+            <label for="dropdown">Unit of measurement</label>
+            <select id="dropDown" name="dropdown">
+              <option value="g">g</option>
+              <option value="hg">hg</option>
+              <option value="ml">ml</option>
+              <option value="dl">dl</option>
+              <option value="msk">msk</option>
+              <option value="tsk">tsk</option>
+              <option value="krm">krm</option>
+              <option value="st">st</option>
+            </select>
+          </div>
+          <div class="addIng2">
+            <label for="">Amount</label>
+            <input type="text" placeholder="amount" id="amountInput" required />
+          </div>
+          <button class="addButton" type="submit">Add ingredient</button>
+        </div>
 
-        <label for="">Beskriv maträtten</label>
-        <textarea name=" " id=""></textarea>
-      </div>
+        <div class="uppLoadImg">
+          <label for="">Steps: </label>
+          <textarea name="" class="">Describe the steps</textarea>
 
-      <!-- popupp formular -->
-      <div class="addIng">
-        <input type="text" placeholder="ingridiens" required />
-        <label for="dropdown">Välj ett alternativ:</label>
-        <select id="dropDown" name="dropdown">
-          <option value="g">g</option>
-          <option value="hg">hg</option>
-          <option value="ml">ml</option>
-          <option value="dl">dl</option>
-          <option value="msk">msk</option>
-          <option value="tsk">tsk</option>
-          <option value="krm">krm</option>
-          <option value="st">st</option>
-        </select>
-        <input type="text" placeholder="mängd" required />
-        <button id="addButton" type="submit">Lägg till</button>
-      </div>
+          <img src="/img/emptyImg.png" alt="Empty plate" id="standardImage" />
+          <input
+            type="file"
+            accept="image/jpeg. image/png, image/jpg"
+            class="upploadBtn"
+          />
+        </div>
+
+        <button type="submit" class="submitBtn">Add recipe</button>
+      </form>
     </div>
 
     <script src="script.js"></script>

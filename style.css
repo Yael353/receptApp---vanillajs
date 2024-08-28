@@ -1,5 +1,71 @@
-#addIng {
+body {
+  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.containerForm {
   display: flex;
   flex-direction: column;
+  width: 55%;
+}
+
+.firstPart {
+}
+.name {
+  display: flex;
+  flex-direction: column;
+}
+.describe {
+  display: flex;
+  flex-direction: column;
+}
+
+.recForm {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 5px;
+}
+
+.addIng {
+  display: flex;
   justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-top: 5px;
+}
+
+#standardImage {
+  width: 150px;
+  height: 150px;
+}
+
+.uppLoadImg {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 5px;
+}
+
+.addIng2 {
+  display: flex;
+  flex-direction: column;
+}
+.addButton {
+  height: 20px;
+  margin-top: 5px;
+}
+
+.upploadBtn {
+  margin-left: 20px;
+}
+
+.submitBtn {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
 }
