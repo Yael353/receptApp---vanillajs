@@ -1,22 +1,104 @@
-body {
-  margin: 5px;
-  padding: 5px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header {
+  text-align: center;
+  background-color: rgb(246, 237, 237);
+  padding: 16px 4px;
+  border-bottom: 0.5px solid gray;
+}
+
+button {
+  padding: 4px 12px;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 8px 0;
+  text-transform: uppercase;
+}
+
+label {
+  font-weight: 600;
+  padding-bottom: 2px;
+}
+
+input {
+  padding: 2px;
+}
+
+section {
+  padding: 10px 0;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: rgb(246, 237, 237);
+  padding: 24px 4px;
+}
+
+.heroSection p {
+  text-align: center;
+  max-width: 70%;
+}
+
+.content {
+  padding: 16px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerFormContent {
+  width: 90%;
+  max-width: 500px;
 }
 
 .containerForm {
   display: flex;
   flex-direction: column;
-  width: 55%;
+  background-color: white;
+  padding: 24px 16px;
+  border: 0.3px solid gray;
+  align-items: center;
+  box-shadow: 1px 1px 4px rgb(94, 89, 89);
 }
 
-.firstPart {
+.containerForm h2 {
+  padding: 12px 0 16px 0;
+  text-align: center;
 }
-.name {
-  display: flex;
-  flex-direction: column;
-}
-.describe {
+
+.recipeTitle {
   display: flex;
   flex-direction: column;
 }
@@ -24,17 +106,23 @@ body {
 .recForm {
   display: flex;
   flex-direction: column;
-
-  margin-top: 5px;
 }
 
-.addIng {
+.firstPart {
   display: flex;
-  justify-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
+}
 
-  margin-top: 5px;
+.describe {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredientSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 #standardImage {
@@ -44,22 +132,27 @@ body {
 
 .uppLoadImg {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  margin-left: -8px;
+}
 
-  margin-top: 5px;
+#addStepBtn {
+  width: 50%;
+  margin: 12px auto 0 auto;
+}
+
+.addButton {
+  width: 50%;
+  margin: 8px auto 0 auto;
+}
+
+#imageinput {
+  max-width: fit-content;
 }
 
 .addIng2 {
   display: flex;
   flex-direction: column;
-}
-.addButton {
-  height: 20px;
-  margin-top: 5px;
-}
-
-.upploadBtn {
-  margin-left: 20px;
 }
 
 .submitBtn {
@@ -68,4 +161,39 @@ body {
   justify-content: center;
   align-content: center;
   width: 50%;
+}
+
+#ingredientOutput,
+#stepsOutput {
+  list-style-type: decimal;
+}
+
+.ingredientSteps {
+  height: 100px;
+}
+
+#ingredientOutput li {
+  padding-bottom: 5px;
+}
+
+#addRecipe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+  width: 100%;
+}
+
+#addRecipeBtn {
+  width: 100%;
+}
+
+footer {
+  bottom: 0;
+  padding: 16px;
+  text-align: center;
+  background-color: rgb(110, 107, 107);
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
 }

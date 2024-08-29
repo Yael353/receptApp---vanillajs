@@ -7,69 +7,117 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Recept App</h1>
-
-    <button class="containerButton">Upload new recepie</button>
-
-    <div class="containerForm">
-      <form action="" class="recForm">
-        <div class="firstPart">
-          <div class="name">
-            <label for="recepieName">Titel</label>
-            <input type="text" placeholder="Titel" />
-          </div>
-          <div class="describe">
-            <label for="description">describe the dish</label>
-            <textarea name="description" class="description"></textarea>
-          </div>
-        </div>
-
+    <div class="wrapper">
+      <header>
+        <h1>Recipe App</h1>
+      </header>
+      <div class="heroSection">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod illo
+          cum quidem autem eveniet praesentium blanditiis nulla accusamus
+          consectetur aperiam.
+        </p>
+        <button class="containerButton">Upload new recipe</button>
+      </div>
+      <main class="content">
         <!-- popup formulär -->
-        <div class="addIng">
-          <div class="addIng2">
-            <label id="ingrediensInput">Ingrediens</label>
-            <input type="text" placeholder="Ingrediens" required />
+        <div class="containerFormContent">
+          <div class="containerForm">
+            <h2>Create a new recipe</h2>
+            <form action="" class="recForm">
+              <section class="firstPart">
+                <div class="recipeTitle">
+                  <label for="recepieName">Name the dish</label>
+                  <input type="text" placeholder="Title" />
+                </div>
+                <div class="describe">
+                  <label for="description">Describe the dish</label>
+                  <textarea name="description" class="description"></textarea>
+                </div>
+              </section>
+
+              <!--add ingridient-->
+              <section class="ingredientSection">
+                <div class="addIng2">
+                  <label for="ingredientInput">Add ingredient </label>
+                  <input
+                    type="text"
+                    id="ingredientInput"
+                    placeholder="Ingredient"
+                  />
+                </div>
+                <div class="addIng2">
+                  <label for="dropdown">Unit of measurement</label>
+                  <select id="dropDown" name="dropdown">
+                    <option value="" selected hidden>Unit</option>
+                    <option value="g">g</option>
+                    <option value="hg">hg</option>
+                    <option value="ml">ml</option>
+                    <option value="dl">dl</option>
+                    <option value="msk">msk</option>
+                    <option value="tsk">tsk</option>
+                    <option value="krm">krm</option>
+                    <option value="st">st</option>
+                  </select>
+                </div>
+
+                <div class="addIng2">
+                  <label for="amountInput">Amount</label>
+                  <input type="text" placeholder="amount" id="amountInput" />
+                </div>
+                <button class="addButton" type="submit">Add ingredient</button>
+              </section>
+
+              <div>
+                <ul id="ingredientOutput"></ul>
+              </div>
+              <!--add steps-->
+              <section class="addIng2">
+                <label for="stepInput">Steps</label>
+                <input
+                  type="text"
+                  placeholder="Write step"
+                  id="stepInput"
+                  required
+                />
+                <button id="addStepBtn" type="submit">Add step</button>
+              </section>
+              <div>
+                <ul id="stepsOutput"></ul>
+              </div>
+
+              <section class="uppLoadImg">
+                <!--
+            <label for="">Steps: </label>
+            <textarea
+              name=""
+              class="ingredientSteps"
+              placeholder="Describe the steps"
+            ></textarea>
+            -->
+
+                <img
+                  src="/img/emptyImg.png"
+                  alt="Empty plate"
+                  id="standardImage"
+                />
+                <input
+                  type="file"
+                  accept="image/jpeg. image/png, image/jpg"
+                  id="imageInput"
+                />
+              </section>
+              <div id="addRecipe">
+                <button type="submit" id="addRecipeBtn">Add recipe</button>
+              </div>
+            </form>
           </div>
-          <div class="addIng2">
-            <label for="dropdown">Unit of measurement</label>
-            <select id="dropDown" name="dropdown">
-              <option value="g">g</option>
-              <option value="hg">hg</option>
-              <option value="ml">ml</option>
-              <option value="dl">dl</option>
-              <option value="msk">msk</option>
-              <option value="tsk">tsk</option>
-              <option value="krm">krm</option>
-              <option value="st">st</option>
-            </select>
-          </div>
-          <div class="addIng2">
-            <label for="">Amount</label>
-            <input type="text" placeholder="amount" id="amountInput" required />
-          </div>
-          <button class="addButton" type="submit">Add ingredient</button>
         </div>
-
-        <div>
-          <ul></ul>
-        </div>
-
-        <div class="uppLoadImg">
-          <label for="">Steps: </label>
-          <textarea name="" class="">Describe the steps</textarea>
-
-          <img src="/img/emptyImg.png" alt="Empty plate" id="standardImage" />
-          <input
-            type="file"
-            accept="image/jpeg. image/png, image/jpg"
-            class="upploadBtn"
-          />
-        </div>
-
-        <button type="submit" class="submitBtn">Add recipe</button>
-      </form>
+      </main>
+      <footer>
+        <div>Yaser, Rebecka, Rodrigo, Qasim</div>
+      </footer>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
