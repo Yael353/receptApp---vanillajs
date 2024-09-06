@@ -17,7 +17,11 @@ body {
 }
 
 main {
+  display: flex;
   flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4px;
 }
 
 header {
@@ -27,14 +31,21 @@ header {
   border-bottom: 0.5px solid gray;
 }
 
+/*buttons*/
 button {
-  padding: 4px 12px;
+  padding: 6px 16px;
   font-weight: 600;
   background-color: white;
   border-radius: 8px;
   font-size: 14px;
   margin: 8px 0;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
 }
 
 label {
@@ -50,20 +61,22 @@ section {
   padding: 10px 0;
 }
 
-button:hover {
-  background-color: black;
-  color: white;
-}
-
+/*hero*/
 .heroSection {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-around;
   align-items: center;
-  gap: 16px;
   background-color: rgb(246, 237, 237);
-  padding: 24px 4px;
+}
+
+.heroSection div {
+  padding: 24px 8px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .heroSection p {
@@ -71,16 +84,15 @@ button:hover {
   max-width: 70%;
 }
 
-.content {
-  padding: 16px 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/*add new recipe form wrapper*/
 .containerFormContent {
   width: 90%;
   max-width: 500px;
+  margin: 40px auto;
+}
+
+.containerButton {
+  margin-bottom: 18px;
 }
 
 .containerForm {
@@ -93,9 +105,23 @@ button:hover {
   box-shadow: 1px 1px 4px rgb(94, 89, 89);
 }
 
+/*form title*/
 .containerForm h2 {
   padding: 12px 0 16px 0;
   text-align: center;
+}
+
+/*form */
+.recForm {
+  display: flex;
+  flex-direction: column;
+}
+
+/*first section - title/description*/
+.firstPart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .recipeTitle {
@@ -103,42 +129,16 @@ button:hover {
   flex-direction: column;
 }
 
-.recForm {
-  display: flex;
-  flex-direction: column;
-}
-
-.firstPart {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 .describe {
   display: flex;
   flex-direction: column;
 }
 
+/*ingredient section*/
 .ingredientSection {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-#standardImage {
-  width: 150px;
-  height: 150px;
-}
-
-.uppLoadImg {
-  display: flex;
-  align-items: center;
-  margin-left: -8px;
-}
-
-#addStepBtn {
-  width: 50%;
-  margin: 12px auto 0 auto;
 }
 
 .addButton {
@@ -146,34 +146,42 @@ button:hover {
   margin: 8px auto 0 auto;
 }
 
-#imageinput {
-  max-width: fit-content;
-}
-
+/*add steps section*/
 .addIng2 {
   display: flex;
   flex-direction: column;
 }
 
-.submitBtn {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+#addStepBtn {
   width: 50%;
+  margin: 12px auto 0 auto;
 }
 
+/*li steps/ingredients output*/
 #ingredientOutput,
 #stepsOutput {
   list-style-type: decimal;
+  margin: 6px 0 6px 16px;
 }
 
-.ingredientSteps {
-  height: 100px;
-}
-
-#ingredientOutput li {
+#ingredientOutput li,
+#stepsOutput li {
   padding-bottom: 5px;
+}
+
+/*add img section*/
+.uppLoadImg {
+  display: flex;
+  align-items: center;
+}
+
+#imgSrc {
+  width: 150px;
+  height: 150px;
+}
+
+#imageinput {
+  max-width: fit-content;
 }
 
 #addRecipe {
@@ -188,6 +196,52 @@ button:hover {
   width: 100%;
 }
 
+/*recipe output*/
+#recipeCardContent {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#recipeCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.cardStyling {
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0;
+  padding: 18px 32px;
+  max-width: 600px;
+  min-width: 360px;
+  border: 0.5px solid rgb(182, 181, 181);
+  gap: 4px;
+  box-shadow: 1px 2px 2px gray;
+  background-color: white;
+}
+
+.cardImgStyling {
+  width: 280px;
+  height: 280px;
+  margin: 12px auto;
+}
+
+.cardIngredientsStyling li {
+  list-style-type: decimal;
+  margin: 4px 16px;
+}
+
+.cardStepsStyling li {
+  list-style-type: decimal;
+  margin: 4px 16px;
+}
+
+/*footer*/
 footer {
   bottom: 0;
   padding: 16px;

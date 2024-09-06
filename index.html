@@ -12,11 +12,13 @@
         <h1>Recipe App</h1>
       </header>
       <div class="heroSection">
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod illo
-          cum quidem autem eveniet praesentium blanditiis nulla accusamus
-          consectetur aperiam.
-        </p>
+        <div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod illo
+            cum quidem autem eveniet praesentium blanditiis nulla accusamus
+            consectetur aperiam.
+          </p>
+        </div>
         <button class="containerButton">Upload new recipe</button>
       </div>
       <main class="content">
@@ -28,11 +30,11 @@
               <section class="firstPart">
                 <div class="recipeTitle">
                   <label for="recepieName">Name the dish</label>
-                  <input type="text" placeholder="Title" />
+                  <input id="titleInput" type="text" placeholder="Title" />
                 </div>
                 <div class="describe">
                   <label for="description">Describe the dish</label>
-                  <textarea name="description" class="description"></textarea>
+                  <textarea name="description" id="descriptionInput" placeholder="Description"></textarea>
                 </div>
               </section>
 
@@ -45,6 +47,10 @@
                     id="ingredientInput"
                     placeholder="Ingredient"
                   />
+                </div>
+                <div class="addIng2">
+                  <label for="amountInput">Amount</label>
+                  <input type="text" placeholder="amount" id="amountInput" />
                 </div>
                 <div class="addIng2">
                   <label for="dropdown">Unit of measurement</label>
@@ -61,10 +67,6 @@
                   </select>
                 </div>
 
-                <div class="addIng2">
-                  <label for="amountInput">Amount</label>
-                  <input type="text" placeholder="amount" id="amountInput" />
-                </div>
                 <button class="addButton" type="submit">Add ingredient</button>
               </section>
 
@@ -87,19 +89,10 @@
               </div>
 
               <section class="uppLoadImg">
-                <!--
-            <label for="">Steps: </label>
-            <textarea
-              name=""
-              class="ingredientSteps"
-              placeholder="Describe the steps"
-            ></textarea>
-            -->
-
                 <img
                   src="/img/emptyImg.png"
                   alt="Empty plate"
-                  id="standardImage"
+                  id="imgSrc"
                 />
                 <input
                   type="file"
@@ -111,6 +104,11 @@
                 <button type="submit" id="addRecipeBtn">Add recipe</button>
               </div>
             </form>
+          </div>
+        </div>
+        <!--Created recipes goes here-->
+        <div id="recipeCardContent">
+          <div id="recipeCard">
           </div>
         </div>
       </main>
